@@ -4,7 +4,7 @@ import Play from './pages/play'
 
 function App() {
   return (
-    <Router basename='/'>
+    <Router basename='/add-one-line-of-code'>
       <Routes>
         <Route path='/' element={<Landing />} />
         <Route path='/play' element={<Play />} />
