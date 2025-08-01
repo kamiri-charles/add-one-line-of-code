@@ -1,6 +1,6 @@
 # 🎮 add-one-line-of-code
 
-Welcome to **add-one-line-of-code** — the open source 2D web game where *anyone can contribute by adding just one line of TypeScript code!* 🎉
+Welcome to **add-one-line-of-code** — the open source 2D web game where *anyone can contribute by adding just one line of code!* 🎉
 
 This is a collaborative and beginner-friendly project designed to evolve one line at a time. Whether you're new to coding, curious about game development, or just want to leave your mark — you're in the right place.
 
