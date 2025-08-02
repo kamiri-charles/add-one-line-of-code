@@ -28,7 +28,7 @@ function Play() {
 	}, []);
 
 	return (
-		<div className="bg-black h-[100vh] grid">
+		<div className="bg-black h-[100vh] flex items-center justify-center">
 			<canvas ref={canvasRef} style={{ border: "1px solid #ccc" }}></canvas>
 		</div>
 	);
