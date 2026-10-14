@@ -17,7 +17,7 @@ function Play() {
 		if (!ctx) return;
 
 		const player = createPlayer();
-		const keys = { left: false, right: false };
+		const keys = { left: false, right: false, space: false };
 		const cleanupInput = setupInput(keys);
 
 		startGameLoop(ctx, canvas, player, keys);
