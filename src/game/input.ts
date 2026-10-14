@@ -1,17 +1,20 @@
 export interface Keys {
 	left: boolean;
 	right: boolean;
+	space: boolean;
 }
 
 export function setupInput(keys: Keys) {
 	function handleKeyDown(e: KeyboardEvent) {
 		if (e.key === "ArrowLeft" || e.key === "a") keys.left = true;
 		if (e.key === "ArrowRight" || e.key === "d") keys.right = true;
+			if (e.key === " ") keys.space = true;
 	}
 
 	function handleKeyUp(e: KeyboardEvent) {
 		if (e.key === "ArrowLeft" || e.key === "a") keys.left = false;
 		if (e.key === "ArrowRight" || e.key === "d") keys.right = false;
+		if (e.key === " ") keys.space = false;
 	}
 
 	window.addEventListener("keydown", handleKeyDown);

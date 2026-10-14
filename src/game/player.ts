@@ -20,9 +20,10 @@ export function createPlayer(): Player {
 	};
 }
 
+let spaceWasAlreadyPressed = false;
 export function updatePlayer(
 	player: Player,
-	keys: { left: boolean; right: boolean },
+	keys: { left: boolean; right: boolean, space: boolean },
 	canvasWidth: number
 ) {
 	player.dx = 0;
@@ -32,6 +33,20 @@ export function updatePlayer(
 
 	// Clamp to canvas
 	player.x = Math.max(0, Math.min(canvasWidth - player.width, player.x));
+
+	if (keys.space) {
+        if (!spaceWasAlreadyPressed) {
+            player.color = changeColor(); 
+            spaceWasAlreadyPressed = true; 
+        }
+    } else {
+        spaceWasAlreadyPressed = false; 
+    }
+}
+
+export function changeColor(): string {
+	let colors = ["#4ca7af", "#0e0b6e", "#793d8f", "#ae0f0f",];
+	return colors[Math.floor(Math.random() * 4)];
 }
 
 export function drawPlayer(ctx: CanvasRenderingContext2D, player: Player) {
